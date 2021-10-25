@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roshambo Predictor - A Rock, Paper, Scissors Assistant</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <div class="train-form">
+        <div class="previous-data-container">
+          <div class="winner-container">
+            <h4>Previous Winner</h4>
+
+            <div class="rps-container">
+              <div class="rps-winner" data-value="rock" data-color="skyblue">Rock</div>
+              <div class="rps-winner" data-value="paper" data-color="lightgreen">Paper</div>
+              <div class="rps-winner" data-value="scissors" data-color="red">Scissors</div>
+            </div>
+          </div>
+
+          <div class="next-winner-container">
+            <h4>Current Winner</h4>
+
+            <div class="rps-container">
+              <div class="rps-next-winner" data-value="rock" data-color="skyblue">Rock</div>
+              <div class="rps-next-winner" data-value="paper" data-color="lightgreen">Paper</div>
+              <div class="rps-next-winner" data-value="scissors" data-color="red">Scissors</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button id="add-button">Add Result</button>
+          <button id="train-button" disabled>Finish Training</button>
+        </div>
+
+        <div class="train-data-container">
+          <div>Training Data</div>
+          <textarea id="train-data-json-container">[]</textarea>
+        </div>
+
+        <div class="result-container">
+          <button id="predict-button">Predict</button>
+          <div class="result-data-container">
+            <div class="result" data-color="" id="result-label-1"></div>
+            <div id="result-confidence-1"></div>
+            <div class="result" data-color="" id="result-label-2"></div>
+            <div id="result-confidence-2"></div>
+            <div class="result" data-color="" id="result-label-3"></div>
+            <div id="result-confidence-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="ml5.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
